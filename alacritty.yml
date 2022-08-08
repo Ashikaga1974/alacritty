@@ -21,7 +21,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: xterm-256color
+  TERM: xterm
 
 window:
   # Window dimensions (changes require restart)
@@ -157,14 +157,14 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 12.0
+  size: 10.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   offset:
-    x: 1
-    y: 1
+    x: 0
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -341,7 +341,7 @@ colors:
       cyan:    '#93a1a1' # base1
       white:   '#fdf6e3' # base3
 
-colors: *SolarizedDark
+#colors: *SolarizedDark
 
   # Indexed Colors
   #

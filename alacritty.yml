@@ -15,7 +15,7 @@
 # environment variables. Some entries may override variables
 # set by alacritty itself.
 env:
-  TERM: xterm
+  TERM: alacritty
 
 window:
   # Window dimensions (changes require restart)
@@ -41,8 +41,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 6
-    y: 6
+    x: 12
+    y: 12
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -76,7 +76,7 @@ window:
   startup_mode: Windowed
 
   # Window title
-  title: Sascha's Alacritty
+  title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
   #dynamic_title: true
@@ -92,7 +92,7 @@ window:
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark`
   # and `light`. Set this to `None` to use the default theme variant.
-  gtk_theme_variant: light
+  gtk_theme_variant: dark
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -273,9 +273,9 @@ mouse:
 key_bindings:
   - { key: Paste,                                             action: Paste            }
   - { key: Copy,                                              action: Copy             }
-  - { key: V,              mods: Control, mode: ~Vi,          action: Paste            }
+  - { key: V,              mods: Control,                     action: Paste            }
   - { key: C,              mods: Control,                     action: Copy             }
   - { key: Plus,           mods: Control,                     action: IncreaseFontSize }
   - { key: Minus,          mods: Control,                     action: DecreaseFontSize }
-
+  - { key: Space,          mods: Control, mode: ~Search,      action: ToggleViMode     }
   
